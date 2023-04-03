@@ -33,8 +33,35 @@
   </header>
 
   <main class="main-container">
+    <header class="hero">
+      <h1 class="visually-hidden">Городок Седона</h1>
+      <img class="hero__hero-welcome" src="/source/img/sedona.png"
+        alt="Welcome to the gargeous Sedona, because the Grand Canyon sucks!" width="229" height="39">
+    </header>
+
+    <section class="review">
+      <h2 class="review_title">Оставьте свой отзыв</h2>
+      <p class="review__info">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами
+        достопримечательностях</p>
+      <form class="review__form-review" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="form-review__name">
+          <legend class="form-review__title">Представьтесь:</legend>
+          <label>Имя*:
+            <input class="form-review__input" type="text" placeholder="Пётр">
+          </label>
+          <label>Фамилия*:
+            <input type="text" placeholder="Пустота">
+          </label>
+          <label>Отчество:
+            <input class="form-review__input" type="text" placeholder="Викторович">
+          </label>
+        </fieldset>
+
+      </form>
+    </section>
 
   </main>
+
   <footer class="main-footer">
     <div class="main-footer__hashtag">
       <a class="hashtag__link" href="#">#visitSEDONA</a>
