@@ -1,0 +1,34 @@
+.advantages {
+  text-align: center;
+}
+
+.advantages__title {
+  margin: 32px 18px 35px;
+}
+
+.advantages__description {
+  margin: 0 16px 32px;
+}
+advantages__item {
+  padding: 0 18px;
+}
+
+.advantages__list {
+  @include list-reset;
+}
+
+.advantages__item-title {
+  margin: 33px 18px 49px;
+}
+
+.advantages__item-description {
+  margin: 0 18px 40px;
+}
+
+.advantages__item-big {
+  background-color: $main-color;
+}
+
+.advantages__advices-list {
+  margin: 23px 18px 46px;
+}

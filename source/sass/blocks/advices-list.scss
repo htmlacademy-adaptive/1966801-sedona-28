@@ -1,0 +1,17 @@
+.advices-list {
+  @include list-reset;
+  text-align: start;
+  background-color: #ffffff;
+}
+
+.advices-list__item {
+  margin-left: 27px;
+}
+
+.advices-list__item-title {
+  margin-top: 8px;
+}
+
+.advices-list__item-description {
+  margin-top: 16px;
+}
