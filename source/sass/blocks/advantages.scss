@@ -18,6 +18,10 @@
   padding: 0 18px;
 }
 
+.advantages__item {
+  background-color: #eeeeee;
+}
+
 .advantages__item-title {
   padding-bottom: 11px;
   padding-top: 33px;
@@ -38,11 +42,8 @@
   background-color: $main-color;
 }
 
-.advantages__item--grey {
-  background-color: #eeeeee;
-}
-
 .advantages__item--icon {
   text-align: start;
   padding-left: 47px;
+  background-color: #ffffff;
 }
