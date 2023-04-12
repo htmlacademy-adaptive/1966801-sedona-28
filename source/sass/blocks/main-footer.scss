@@ -1,0 +1,20 @@
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  text-align: center;
+  padding: 33px 10px;
+}
+
+.hashtag__link {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.social__list {
+  @include list-reset;
+}
