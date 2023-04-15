@@ -4,7 +4,17 @@
   flex-wrap: wrap;
   gap: 30px;
   text-align: center;
-  padding: 33px 10px;
+  padding: 33px 82px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 36px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 36px 120px;
+  }
 }
 
 .hashtag__link {

@@ -1,13 +1,14 @@
 // Common
 @import "./fonts.scss";
-@import "./blocks/page.scss";
 @import "./blocks/visually-hidden.scss";
+@import "./global.scss";
 
 // Mixins and variables
 @import "./mixins.scss";
 @import "./variables.scss";
 
 // Blocks
+@import "./blocks/page.scss";
 @import "./blocks/buttons.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/main-nav.scss";

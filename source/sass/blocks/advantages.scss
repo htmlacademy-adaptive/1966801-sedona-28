@@ -12,10 +12,19 @@
 
 .advantages__list {
   @include list-reset;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .advantages__text-wrapper {
   padding: 0 18px;
+}
+
+.advantages__item {
+  background-color: #eeeeee;
 }
 
 .advantages__item-title {
@@ -35,14 +44,22 @@
 }
 
 .advantages__item-big {
+  color: #ffffff;
   background-color: $main-color;
-}
 
-.advantages__item--grey {
-  background-color: #eeeeee;
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    display: flex;
+  }
 }
 
 .advantages__item--icon {
   text-align: start;
   padding-left: 47px;
+  background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    padding-left: 0;
+  }
 }

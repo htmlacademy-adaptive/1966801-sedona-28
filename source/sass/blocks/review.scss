@@ -1,10 +1,22 @@
 .review {
   padding: 36px 20px 22px;
+
+  @media (min-width: $tablet-width) {
+    padding: 64px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 115px 120px 64px;
+  }
 }
 
 .review__title {
   text-align: center;
   padding-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .review__info {
@@ -20,6 +32,22 @@
   padding: 0;
   padding-bottom: 24px;
   border: none;
+}
+
+.review__fieldset--width {
+  @media (min-width: $tablet-width) {
+    grid-column: 1/-1;
+    flex-direction: row;
+    text-align: center;
+  }
+}
+
+.review__form {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+  }
 }
 
 .review__form-item {
