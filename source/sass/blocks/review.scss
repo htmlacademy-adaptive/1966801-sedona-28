@@ -25,6 +25,18 @@
   margin: 0;
 }
 
+.review__form {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 42px 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 56px 100px;
+  }
+}
+
 .review__fieldset {
   display: flex;
   flex-direction: column;
@@ -39,14 +51,6 @@
     grid-column: 1/-1;
     flex-direction: row;
     text-align: center;
-  }
-}
-
-.review__form {
-  @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 70px;
   }
 }
 
