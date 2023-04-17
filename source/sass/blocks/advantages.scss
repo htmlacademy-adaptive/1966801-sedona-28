@@ -12,6 +12,18 @@
 
 .advantages__list {
   @include list-reset;
+  counter-reset: list;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.advantages__sublist {
+  @include list-reset;
+  padding-left: 47px;
+  background-color: #ffffff;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -28,8 +40,23 @@
 }
 
 .advantages__item-title {
-  padding-bottom: 11px;
+  position: relative;
+  padding-bottom: 49px;
   padding-top: 33px;
+}
+
+.advantages__item-title--counted {
+  &::after {
+    position: absolute;
+    bottom: 11px;
+    left: 40%;
+    text-align: center;
+    counter-increment: list;
+    content: "— №" counter(list) " —";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
 
 .advantages__item-description {
@@ -55,7 +82,7 @@
 
 .advantages__item--icon {
   text-align: start;
-  padding-left: 47px;
+  color: #000000;
   background-color: #ffffff;
 
   @media (min-width: $tablet-width) {

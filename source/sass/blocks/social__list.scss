@@ -1,0 +1,33 @@
+.social__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.social__link {
+  fill: #ffffff;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 12px;
+  box-sizing: border-box;
+  background-color: $main-color;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  &:active {
+    background-color: $click-color;
+    fill: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.social__link svg {
+  display: block;
+}
