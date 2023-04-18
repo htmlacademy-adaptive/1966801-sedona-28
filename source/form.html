@@ -76,38 +76,66 @@
 
         <fieldset class="review__fieldset review__fieldset--width">
           <legend class="review__title title">Ваше общее впечатление:</legend>
-          <label class="review__label review__label--bold">
-            <input class="review__input" type="radio" name="impress-group" value="positive" checked>
-            Скорее положительное
-          </label>
-          <label class="review__label review__label--bold">
-            <input class="review__input" type="radio" name="impress-group" value="negative">
-            Скорее отрицательное
-          </label>
-          <label class="review__label review__label--bold">
-            <input class="review__input" type="radio" name="impress-group" value="unsure">
-            Затрудняюсь ответить
-          </label>
+          <ul class="review__list">
+            <li class="review__item">
+              <label class="review__label review__label--bold review__label--control">
+                <input class="review__input visually-hidden" type="radio" name="impress-group" value="positive" checked>
+                <span class="review__control-mark"></span>
+                <span>Скорее положительное</span>
+              </label>
+            </li>
+            <li class="review__item">
+              <label class="review__label review__label--bold review__label--control">
+                <input class="review__input visually-hidden" type="radio" name="impress-group" value="negative">
+                <span class="review__control-mark"></span>
+                <span>Скорее отрицательное</span>
+              </label>
+            </li>
+            <li class="review__item">
+              <label class="review__label review__label--bold review__label--control">
+                <input class="review__input visually-hidden" type="radio" name="impress-group" value="unsure">
+                <span class="review__control-mark"></span>
+                <span>Затрудняюсь ответить</span>
+              </label>
+            </li>
+          </ul>
         </fieldset>
 
         <fieldset class="review__fieldset review__fieldset--width">
           <legend class="review__title title">Посещенные достопримечательности:</legend>
-          <label class="review__label review__label--bold">
-            <input class="review__input" type="checkbox" name="place-group" value="devil's bridge" checked>
-            Мост Дьявола
-          </label>
-          <label class="review__label review__label--bold">
-            <input class="review__input" type="checkbox" name="place-group" value="mountain-bell" checked>
-            Гора-Колокол
-          </label>
-          <label class="review__label review__label--bold">
-            <input class="review__input" type="checkbox" name="place-group" value="slide park" checked>
-            Слайд-парк
-          </label>
-          <label class="review__label review__label--bold">
-            <input class="review__input" type="checkbox" name="place-group" value="red rocks">
-            Красные скалы
-          </label>
+          <ul class="review__list review__list-place">
+            <li class="review__item">
+              <label class="review__label review__label--bold review__label--control">
+                <input class="review__input visually-hidden" type="checkbox" name="place-group" value="devil's bridge"
+                  checked>
+                <span class="review__control-mark"></span>
+                <span>Мост Дьявола</span>
+              </label>
+            </li>
+            <li class="review__item">
+              <label class="review__label review__label--bold review__label--control">
+                <input class="review__input visually-hidden" type="checkbox" name="place-group" value="mountain-bell"
+                  checked>
+                <span class="review__control-mark"></span>
+                <span>Гора-Колокол</span>
+              </label>
+            </li>
+            <li class="review__item">
+              <label class="review__label review__label--bold review__label--control">
+                <input class="review__input visually-hidden" type="checkbox" name="place-group" value="slide park"
+                  checked>
+                <span class="review__control-mark"></span>
+                <span>Слайд-парк</span>
+              </label>
+            </li>
+            <li class="review__item">
+              <label class="review__label review__label--bold review__label--control">
+                <input class="review__input visually-hidden" type="checkbox" name="place-group" value="red rocks">
+                <span class="review__control-mark"></span>
+                <span>Красные скалы</span>
+              </label>
+            </li>
+          </ul>
         </fieldset>
 
         <fieldset class="review__fieldset review__fieldset--width">
