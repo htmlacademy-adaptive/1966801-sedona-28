@@ -48,65 +48,66 @@
       <p class="advantages__description description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
       <ol class="advantages__list">
         <li class="advantages__item advantages__item--width advantages__item--big">
-          <div class="advantages__text-wrapper advantages__text-wrapper--width">
+          <div class="advantages__text-wrapper">
             <h3 class="advantages__item-title advantages__item-title--counted title">Настоящий городок</h3>
             <p class="advantages__item-description description">Седона — не аттракцион для туристов, там течёт своя
               жизнь
             </p>
           </div>
-          <img class="advantages__item-img" src="./img/photo-city@1x1.jpg" alt="Улица Седоны." width="320" height="260">
+          <picture>
+            <source media="(min-width: 1200px)"
+              srcset="./img/photo-city-desktop.jpg 1x, ./img/photo-city-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/photo-city-tablet.jpg 1x, ./img/photo-city-tablet@2x.jpg 2x">
+            <img class="advantages__item-img" src="./img/photo-city-mobile.jpg" width="320" height="260"
+              srcset="./img/photo-city-mobile@2x.jpg 2x" alt="Улица Седоны.">
+          </picture>
           <ul class="advantages__sublist">
             <li class="advantages__item advantages__item--icon advantages__item--icon-house">
-              <div class="advantages__text-wrapper">
-                <h3 class="advantages__item-title title">Жильё</h3>
-                <p class="advantages__item-description description">Рекомендуем пожить в настоящем мотеле, всё как в
-                  кино!
-                </p>
-              </div>
+              <h3 class="advantages__item-title title">Жильё</h3>
+              <p class="advantages__item-description description">Рекомендуем пожить в настоящем мотеле, всё как в
+                кино!
+              </p>
             </li>
             <li class="advantages__item advantages__item--icon advantages__item--icon-burger">
-              <div class="advantages__text-wrapper">
-                <h3 class="advantages__item-title title">Еда</h3>
-                <p class="advantages__item-description description">Всегда заказывайте фирменный бургер, вы не
-                  разочаруетесь!
-                </p>
-              </div>
+              <h3 class="advantages__item-title title">Еда</h3>
+              <p class="advantages__item-description description">Всегда заказывайте фирменный бургер, вы не
+                разочаруетесь!
+              </p>
             </li>
             <li class="advantages__item advantages__item--icon advantages__item--icon-gift">
-              <div class="advantages__text-wrapper">
-                <h3 class="advantages__item-title title">Сувениры</h3>
-                <p class="advantages__item-description description">Не только китайского, но и местного производства!
-                </p>
-              </div>
+              <h3 class="advantages__item-title title">Сувениры</h3>
+              <p class="advantages__item-description description">Не только китайского, но и местного производства!
+              </p>
             </li>
           </ul>
         </li>
         <li class="advantages__item advantages__item--width advantages__item--reverse">
-          <div class="advantages__text-wrapper advantages__text-wrapper--width">
+          <div class="advantages__text-wrapper">
             <h3 class="advantages__item-title advantages__item-title--counted title">Там есть мост дьявола</h3>
             <p class="advantages__item-description description">Да, по нему можно пройти! Если вы осмелитесь, разумеется
             </p>
           </div>
-          <img class="advantages__item-img" src="./img/photo-bridge@1x1.jpg" alt="Улица Седоны." width="320"
-            height="260">
+          <picture>
+            <source media="(min-width: 1200px)"
+              srcset="./img/photo-bridge-desktop.jpg 1x, ./img/photo-bridge-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/photo-bridge-tablet.jpg 1x, ./img/photo-bridge-tablet@2x.jpg 2x">
+            <img class="advantages__item-img" src="./img/photo-bridge-mobile.jpg" width="320" height="260"
+              srcset="./img/photo-bridge-mobile@2x.jpg 2x" alt="Улица Седоны.">
+          </picture>
         </li>
         <li class="advantages__item advantages__item--no-img">
-          <div class="advantages__text-wrapper">
-            <h3 class="advantages__item-title advantages__item-title--counted title">Небольшая площадь</h3>
-            <p class="advantages__item-description description">Все интересные места находятся очень близко</p>
-          </div>
+          <h3 class="advantages__item-title advantages__item-title--counted title">Небольшая площадь</h3>
+          <p class="advantages__item-description description">Все интересные места находятся очень близко</p>
         </li>
         <li class="advantages__item advantages__item--no-img">
-          <div class="advantages__text-wrapper">
-            <h3 class="advantages__item-title advantages__item-title--counted title">Красивая дорога</h3>
-            <p class="advantages__item-description description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </div>
+          <h3 class="advantages__item-title advantages__item-title--counted title">Красивая дорога</h3>
+          <p class="advantages__item-description description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
         <li class="advantages__item advantages__item--no-img">
-          <div class="advantages__text-wrapper">
-            <h3 class="advantages__item-title advantages__item-title--counted title">Мало туристов</h3>
-            <p class="advantages__item-description description">Большинство едет в Гранд Каньон и толпится там</p>
-          </div>
+          <h3 class="advantages__item-title advantages__item-title--counted title">Мало туристов</h3>
+          <p class="advantages__item-description description">Большинство едет в Гранд Каньон и толпится там</p>
         </li>
       </ol>
     </section>
