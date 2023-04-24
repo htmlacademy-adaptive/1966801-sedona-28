@@ -54,12 +54,12 @@
   padding: 37px 18px;
 
   @media (min-width: $tablet-width) {
-    width: 256px;
+    min-width: 256px;
     padding: 52px 33px 31px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 400px;
+    min-width: 400px;
     padding: 52px 50px;
   }
 }
@@ -96,14 +96,11 @@
   display: block;
   margin: 0;
   object-fit: cover;
+  width: 100%;
+  height: 260px;
 
   @media (min-width: $tablet-width) {
-    width: 512px;
-    height: 100%;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 800px;
+    height: auto;
   }
 }
 
