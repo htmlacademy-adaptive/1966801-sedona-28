@@ -108,7 +108,19 @@
 }
 
 .photo__item-likes {
-  padding-left: 40px;
+  padding-left: 14px;
   font-weight: 700;
-  margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 9px;
+  }
+}
+
+.photo__likes-icon {
+  opacity: 0.3;
+
+  @media (min-width: $desktop-width) {
+    opacity: 1;
+    fill: #ffffff;
+  }
 }
