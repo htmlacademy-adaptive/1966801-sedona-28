@@ -1,11 +1,11 @@
 .copyright__link {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 12px;
-  color: #000000;
-  height: 36px;
   text-decoration: none;
+  color: #000000;
+  max-width: 130px;
   cursor: pointer;
 
   &:hover {
@@ -18,7 +18,12 @@
 }
 
 .copyright__link svg {
-  width: 28px;
-  height: 35px;
-  box-sizing: border-box;
+  display: block;
+  fill: currentColor;
+}
+
+.copyright__text {
+  @media (min-width: $tablet-width) {
+    margin-right: 5px;
+  }
 }

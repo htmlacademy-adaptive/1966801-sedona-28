@@ -10,7 +10,7 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
-import svgstore from 'gulp-svgstore';
+import { stacksvg } from "gulp-stacksvg";
 import {deleteAsync} from 'del';
 
 // Styles
@@ -69,16 +69,15 @@ const createWebp = () => {
 
 // SVG
 
-const svg = () => {
-  return gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+const svg = () =>
+  gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
-}
 
-const sprite = () => {
+export const sprite = () => {
   return gulp.src('source/img/icons/*.svg')
     .pipe(svgo())
-    .pipe(svgstore({inLineSvg: true}))
+    .pipe(stacksvg({inLineSvg: true}))
     .pipe(rename('sprite.svg'))
     .pipe(gulp.dest('build/img'));
 }
@@ -143,9 +142,10 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
+    sprite,
     createWebp
     ),
-  sprite,
+
 );
 
 // Default
@@ -159,9 +159,9 @@ export default gulp.series(
     html,
     scripts,
     svg,
+    sprite,
     createWebp
   ),
-  sprite,
   gulp.series(
     server,
     watcher

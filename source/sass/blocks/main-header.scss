@@ -12,8 +12,13 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     z-index: 1;
   }
+}
+
+.main-header__logo-image {
+  max-width: min-content;
 }

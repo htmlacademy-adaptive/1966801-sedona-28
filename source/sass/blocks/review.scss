@@ -12,24 +12,64 @@
 
 .review__title {
   text-align: center;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+}
+
+.review__form-title {
+  text-align: center;
+  padding-top: 24px;
   padding-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     font-size: 21px;
+    padding-bottom: 27px;
+  }
+
+  &--radio {
+    padding-top: 19px;
+
+    @media (min-width: $tablet-width) {
+      padding: 24px 65px 27px;
+    }
+  }
+
+  &--checkbox {
+    padding-top: 10px;
+
+    @media (min-width: $tablet-width) {
+      padding: 10px 120px 27px;
+    }
+  }
+
+  &--feedback {
+    padding-top: 8px;
   }
 }
 
 .review__info {
   text-align: center;
-  padding-bottom: 28px;
+  padding: 0 20px 28px;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 106px 85px;
+  }
 }
 
 .review__form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 42px 58px;
+    column-gap: 58px;
     justify-content: center;
   }
 
@@ -39,6 +79,7 @@
 }
 
 .review__fieldset {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -46,12 +87,40 @@
   padding: 0;
   padding-bottom: 24px;
   border: none;
+
+  @media (max-width: $mobile-width-only) {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100vw;
+      left: -20px;
+      top: -70px;
+      height: 1px;
+      background-color: #e5e5e5;
+    }
+  }
+
+  &--feedback {
+    padding-bottom: 56px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 50px;
+    }
+  }
+
+  &--checkbox {
+    padding-bottom: 18px;
+  }
+
+  &--width {
+    @media (min-width: $tablet-width) {
+      grid-column: 1/-1;
+    }
+  }
 }
 
-.review__fieldset--width {
-  @media (min-width: $tablet-width) {
-    grid-column: 1/-1;
-  }
+.review__fieldset--checkbox.review__fieldset::before {
+  top: -98px;
 }
 
 .review__form-item {
@@ -60,6 +129,7 @@
 }
 
 .review__label {
+  position: relative;
   padding-left: 16px;
   cursor: pointer;
 }
@@ -80,6 +150,42 @@
   margin-bottom: 16px;
   background-color: #f2f2f2;
   border: none;
+
+  &::placeholder {
+    color: #000000;
+  }
+
+  &--light::placeholder {
+    opacity: 0.3;
+  }
+
+  &--icon {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 58px;
+      height: 58px;
+      right: 0;
+      top: 21px;
+      background-color: #e6e6e6;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 18px;
+    }
+  }
+
+  &--icon-phone {
+    &::after {
+      background-image: url("../img/sprite.svg#phone");
+    }
+  }
+
+  &--icon-email {
+    &::after {
+      top: 21px;
+      background-image: url("../img/sprite.svg#email");
+    }
+  }
 }
 
 .review__list {
@@ -88,22 +194,26 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    padding-left: 36px;
+    column-gap: 50px;
     padding-right: 36px;
-    margin: 0 auto;
+    margin: 0 auto 0 38px;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    gap: 28px;
+    column-gap: 49px;
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto 0 36px;
   }
 }
 
 .review__list-place {
+  @media (min-width: $tablet-width) {
+    padding-left: 48px;
+    column-gap: 33px;
+  }
+
   @media (min-width: $desktop-width) {
     gap: 64px;
   }
@@ -134,7 +244,7 @@
     background-color: #d5d5d5;
   }
 
-  &:active .review__input[type="radio"]:checked + .review__control-mark::before {
+  &:active.review__input[type="radio"]:checked + .review__control-mark::before {
     opacity: 0.3;
   }
 }
@@ -156,9 +266,10 @@
   left: 0;
   width: 46px;
   height: 46px;
-  background-image: url("../../img/tick.svg");
+  background-image: url("../img/sprite.svg#tick");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 22px 16px;
   z-index: 1;
 }
 
@@ -182,9 +293,17 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+  min-height: 150px;
   color: rgba(0, 0, 0, 0.3);
   padding: 16px;
   background-color: #f2f2f2;
+  border: none;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    min-height: 160px;
+    padding-left: 19px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-left: 96px;
@@ -194,6 +313,10 @@
 
 .review__button {
   display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 324px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-left: 96px;
@@ -207,7 +330,7 @@
   margin-left: 143px;
   align-self: center;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     font-size: 14px;
     line-height: 21px;
     margin-left: auto;

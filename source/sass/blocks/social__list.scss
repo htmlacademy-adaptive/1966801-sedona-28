@@ -24,7 +24,7 @@
 
   &:active {
     background-color: $click-color;
-    fill: rgba(255, 255, 255, 0.3);
+    opacity: 0.3;
   }
 }
 
