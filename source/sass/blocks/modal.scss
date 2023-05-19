@@ -43,22 +43,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 28px;
+  gap: 24px;
 }
 
 .modal__window-failure .modal__text-wrapper {
   padding: 45px 41px 0;
 
   @media (min-width: $tablet-width) {
-    padding: 38px 46px 0;
+    padding: 75px 46px 0;
   }
 }
 
 .modal__window-success .modal__text-wrapper {
-  padding: 45px 34px 0;
+  padding: 36px 34px 27px;
 
   @media (min-width: $tablet-width) {
-    padding: 58px 98px 0;
+    padding: 65px 102px 27px;
   }
 }
 
@@ -72,7 +72,7 @@
   padding: 0 70px 35px;
 
   @media (min-width: $tablet-width) {
-    padding: 0 64px 49px;
+    padding: 20px 64px 49px;
   }
 }
 

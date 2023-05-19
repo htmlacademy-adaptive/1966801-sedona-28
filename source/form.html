@@ -49,7 +49,7 @@
 
     <section class="review">
       <h2 class="review__title title">Оставьте свой отзыв</h2>
-      <p class="review__info">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами
+      <p class="review__info">Помогите нашим отелям стать лучше! оставьте отзыв о них, а&nbsp;также о посещенных вами
         достопримечательностях</p>
       <form class="review__form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="review__fieldset">
@@ -68,7 +68,7 @@
           </div>
         </fieldset>
 
-        <fieldset class="review__fieldset">
+        <fieldset class="review__fieldset review__fieldset--contacts">
           <legend class="review__form-title title">Контактная информация:</legend>
           <div class="review__form-item">
             <label class="review__label  review__input--icon review__input--icon-phone" for="review-tel">Контактный телефон*:</label>
@@ -86,21 +86,21 @@
             <li class="review__item">
               <label class="review__label review__label--bold review__label--control">
                 <input class="review__input visually-hidden" type="radio" name="impress-group" value="positive" checked>
-                <span class="review__control-mark"></span>
+                <span class="review__control-mark" tabindex="0"></span>
                 <span>Скорее положительное</span>
               </label>
             </li>
             <li class="review__item">
               <label class="review__label review__label--bold review__label--control">
                 <input class="review__input visually-hidden" type="radio" name="impress-group" value="negative">
-                <span class="review__control-mark"></span>
+                <span class="review__control-mark" tabindex="0"></span>
                 <span>Скорее отрицательное</span>
               </label>
             </li>
             <li class="review__item">
               <label class="review__label review__label--bold review__label--control">
                 <input class="review__input visually-hidden" type="radio" name="impress-group" value="unsure">
-                <span class="review__control-mark"></span>
+                <span class="review__control-mark" tabindex="0"></span>
                 <span>Затрудняюсь ответить</span>
               </label>
             </li>
@@ -114,7 +114,7 @@
               <label class="review__label review__label--bold review__label--control">
                 <input class="review__input visually-hidden" type="checkbox" name="place-group" value="devil's bridge"
                   checked>
-                <span class="review__control-mark"></span>
+                <span class="review__control-mark" tabindex="0"></span>
                 <span>Мост Дьявола</span>
               </label>
             </li>
@@ -122,7 +122,7 @@
               <label class="review__label review__label--bold review__label--control">
                 <input class="review__input visually-hidden" type="checkbox" name="place-group" value="mountain-bell"
                   checked>
-                <span class="review__control-mark"></span>
+                <span class="review__control-mark" tabindex="0"></span>
                 <span>Гора-Колокол</span>
               </label>
             </li>
@@ -130,14 +130,14 @@
               <label class="review__label review__label--bold review__label--control">
                 <input class="review__input visually-hidden" type="checkbox" name="place-group" value="slide park"
                   checked>
-                <span class="review__control-mark"></span>
+                <span class="review__control-mark" tabindex="0"></span>
                 <span>Слайд-парк</span>
               </label>
             </li>
             <li class="review__item">
               <label class="review__label review__label--bold review__label--control">
                 <input class="review__input visually-hidden" type="checkbox" name="place-group" value="red rocks">
-                <span class="review__control-mark"></span>
+                <span class="review__control-mark" tabindex="0"></span>
                 <span>Красные скалы</span>
               </label>
             </li>
@@ -146,7 +146,7 @@
 
         <fieldset class="review__fieldset review__fieldset--feedback review__fieldset--width">
           <legend class="review__form-title review__form-title--feedback title">Опишите свои эмоции:</legend>
-          <textarea class="review__textarea" name="feedback">Опишите подробно все свои восторги </textarea>
+          <textarea class="review__textarea" name="feedback" placeholder="Опишите подробно все свои восторги"></textarea>
         </fieldset>
         <button class="review__button button" type="submit">Отправить отзыв</button>
         <span class="review_comment">* — обязательные поля</span>
@@ -201,7 +201,7 @@
   <div class="modal modal-closed">
     <div class="modal__window modal__window-failure modal__window-failure-closed">
       <div class="modal__text-wrapper">
-        <div class="modal__title title">что-то пошло не так!</div>
+        <div class="modal__title title">что-то пошло не&nbsp;так!</div>
         <div class="modal__description description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</div>
       </div>
       <div class="modal__button-wrapper">
@@ -211,7 +211,7 @@
     <div class="modal__window modal__window-success modal__window-success-closed">
       <div class="modal__text-wrapper">
         <div class="modal__title title">Ваш отзыв отправлен!</div>
-        <div class="modal__description description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</div>
+        <div class="modal__description description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. <br>В ближайшее время мы опубликуем его на сайте.</div>
       </div>
         <div class="modal__button-wrapper">
           <button class="modal__close-button button" type="button">закрыть окно</button>

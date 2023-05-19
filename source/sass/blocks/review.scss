@@ -18,6 +18,10 @@
     font-size: 30px;
     padding-bottom: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 32px;
+  }
 }
 
 .review__form-title {
@@ -28,6 +32,7 @@
   @media (min-width: $tablet-width) {
     font-size: 21px;
     padding-bottom: 27px;
+    margin: 0 auto;
   }
 
   &--radio {
@@ -35,6 +40,10 @@
 
     @media (min-width: $tablet-width) {
       padding: 24px 65px 27px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 45px;
     }
   }
 
@@ -44,20 +53,38 @@
     @media (min-width: $tablet-width) {
       padding: 10px 120px 27px;
     }
+
+    @media (min-width: $desktop-width) {
+      padding: 27px 280px 60px;
+    }
   }
 
   &--feedback {
     padding-top: 8px;
+    padding-bottom: 22px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 43px;
+      padding-bottom: 28px;
+    }
   }
 }
 
 .review__info {
   text-align: center;
-  padding: 0 20px 28px;
+  padding: 0 0 28px;
   margin: 0;
 
   @media (min-width: $tablet-width) {
     padding: 0 106px 85px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 240px 45px;
   }
 }
 
@@ -68,13 +95,14 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 295px);
     column-gap: 58px;
     justify-content: center;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 56px 100px;
+    grid-template-columns: repeat(2, 430px);
+    gap: 7px 100px;
   }
 }
 
@@ -100,27 +128,116 @@
     }
   }
 
+  &--contacts {
+    @media (min-width: $tablet-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        height: 338px;
+        width: 1px;
+        top: -60px;
+        left: -30px;
+        background-color: #dbdbdb;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      &::before {
+        left: -50px;
+      }
+    }
+  }
+
   &--feedback {
     padding-bottom: 56px;
 
     @media (min-width: $tablet-width) {
       padding-bottom: 50px;
     }
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 40px;
+    }
   }
 
   &--checkbox {
-    padding-bottom: 18px;
+    padding-bottom: 15px;
   }
 
   &--width {
     @media (min-width: $tablet-width) {
       grid-column: 1/-1;
     }
+
+    &::before,
+    &::after {
+      @media (min-width: $tablet-width) {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 123px;
+        top: -41px;
+        background-color: #dbdbdb;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 280px;
+        top: -60px;
+      }
+    }
+
+    &::before {
+      @media (min-width: $tablet-width) {
+        left: 0;
+      }
+    }
+
+    &::after {
+      @media (min-width: $tablet-width) {
+        right: 0;
+      }
+    }
   }
 }
 
-.review__fieldset--checkbox.review__fieldset::before {
-  top: -98px;
+.review__fieldset--checkbox.review__fieldset {
+  &::before {
+    @media (max-width: $mobile-width-only) {
+      top: -98px;
+    }
+
+    @media (min-width: $tablet-width) {
+      top: -55px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -88px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      top: -55px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: -88px;
+    }
+  }
+}
+
+.review__fieldset--feedback.review__fieldset {
+  &::before {
+    @media (min-width: $desktop-width) {
+      top: -42px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      top: -42px;
+    }
+  }
 }
 
 .review__form-item {
@@ -150,6 +267,7 @@
   margin-bottom: 16px;
   background-color: #f2f2f2;
   border: none;
+  cursor: pointer;
 
   &::placeholder {
     color: #000000;
@@ -157,6 +275,16 @@
 
   &--light::placeholder {
     opacity: 0.3;
+  }
+
+  &:placeholder-shown:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:not(:placeholder-shown):focus {
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
   }
 
   &--icon {
@@ -202,20 +330,24 @@
   @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 49px;
+    column-gap: 66px;
     padding: 0;
+    padding-left: 19px;
     margin: 0 auto 0 36px;
   }
 }
 
 .review__list-place {
+  padding-bottom: 5px;
+
   @media (min-width: $tablet-width) {
     padding-left: 48px;
     column-gap: 33px;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 64px;
+    gap: 67px;
+    padding-left: 10px;
   }
 }
 
@@ -234,7 +366,7 @@
 .review__label--control {
   position: relative;
   display: block;
-  padding: 10px 0 10px 62px;
+  padding: 10px 0 10px 60px;
 
   &:hover .review__control-mark {
     background-color: #e5e5e5;
@@ -294,20 +426,35 @@
   font-size: 18px;
   line-height: 26px;
   min-height: 150px;
-  color: rgba(0, 0, 0, 0.3);
+  color: #000000;
   padding: 16px;
   background-color: #f2f2f2;
   border: none;
   box-sizing: border-box;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     min-height: 160px;
-    padding-left: 19px;
+    padding-left: 16px;
   }
 
   @media (min-width: $desktop-width) {
     margin-left: 96px;
     margin-right: 96px;
+  }
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:placeholder-shown:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:not(:placeholder-shown):focus {
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
   }
 }
 
@@ -320,6 +467,7 @@
 
   @media (min-width: $desktop-width) {
     margin-left: 96px;
+    width: 384px;
   }
 }
 
@@ -334,6 +482,8 @@
     font-size: 14px;
     line-height: 21px;
     margin-left: auto;
+    align-self: end;
+    padding-bottom: 15px;
   }
 
   @media (min-width: $desktop-width) {
