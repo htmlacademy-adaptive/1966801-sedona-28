@@ -4,13 +4,26 @@
   flex-wrap: wrap;
   gap: 30px;
   text-align: center;
+  align-items: center;
   justify-content: center;
-  padding: 33px 82px;
+  padding: 40px 82px;
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     padding: 36px 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 36px 120px;
+  }
+}
+
+.main-footer.main-footer--inner {
+  padding: 35px 82px;
+
+  @media (min-width: $tablet-width) {
+    padding: 35px 60px;
   }
 
   @media (min-width: $desktop-width) {

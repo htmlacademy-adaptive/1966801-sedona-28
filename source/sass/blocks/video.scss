@@ -3,17 +3,22 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    padding: 0 60px;
+    padding: 0 60px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 84px;
   }
 }
 
 .video__title {
-  padding: 0 6px 28px;
+  padding: 0 6px 27px;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
     max-width: 445px;
     margin: 0 auto;
+    padding-bottom: 31px;
   }
 }
 
@@ -21,15 +26,26 @@
   padding: 0 6px 38px;
 
   @media (min-width: $tablet-width) {
-    font-size: 21px;
     max-width: 445px;
     margin: 0 auto;
-    padding-bottom: 65px;
+    padding-bottom: 90px;
   }
 }
 
 .video__link {
   display: block;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 54px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../img/sprite.svg#polygon");
+  }
 }
 
 .video__image {
