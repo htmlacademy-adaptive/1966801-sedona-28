@@ -28,12 +28,20 @@
   padding: 0 20px 36px;
   text-align: center;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 0 110px 81px;
   }
 
   @media (min-width: $desktop-width) {
     padding-bottom: 89px;
+
+    br {
+      display: block;
+    }
   }
 }
 
@@ -129,7 +137,11 @@
 .photo__item-title {
   font-size: 14px;
   line-height: 21px;
-  padding-bottom: 5px;
+  padding-bottom: 0;
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 5px;
+  }
 
   &--big {
     @media (min-width: $desktop-width) {
@@ -150,12 +162,16 @@
 
 .photo__item-text {
   @media (min-width: $tablet-width) {
-    padding-top: 17px;
+    padding-top: 16px;
     padding-right: 15px;
   }
 
   &--big {
     @media (min-width: $tablet-width) {
+      padding-top: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
       padding-top: 22px;
     }
   }
