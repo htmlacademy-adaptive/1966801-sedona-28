@@ -18,7 +18,7 @@
 
 .hotel-search__title {
   font-size: 21px;
-  margin: 0 29px 20px;
+  margin: 0 29px 22px;
 
   @media (min-width: $tablet-width) {
     font-size: 30px;
@@ -33,7 +33,19 @@
 .hotel-search__description {
   margin-bottom: 32px;
 
+  br {
+    display: none;
+  }
+
   @media (min-width: $tablet-width) {
     margin-bottom: 45px;
+
+    br {
+      display: block;
+    }
   }
+}
+
+.hotel-search__link {
+  text-decoration: none;
 }
